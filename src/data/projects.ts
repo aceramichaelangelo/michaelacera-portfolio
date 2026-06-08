@@ -1,29 +1,33 @@
 import { Project } from '@/types';
 
-// NOTE: All project images point to public/ directories.
-// You can replace these screenshots inside the public/ directories with your files.
-
 export const featuredProject: Project = {
   id: "featured-native-flora",
   title: "Native Flora Detection and Management System",
-  description: "Cross-platform environmental monitoring app that identifies native flora using YOLO computer vision and maps species with geoanalytics.",
-  longDescription: "",
-  technologies: ["Flutter", "Cloud Database", "Computer Vision", "YOLO", "Geoanalytics", "AI-Assisted Development"],
+  description: "Mobile and web system designed to identify, classify, and map native flora species using computer vision and geoanalytics.",
+  longDescription: "Combines YOLO deep learning models with a Flutter mobile client mapping tool and an admin dashboard to track regional biodiversity.",
+  technologies: ["Flutter", "Cloud Database", "Computer Vision", "YOLO Object Detection Models", "Geoanalytics", "AI-Assisted Development"],
   category: "featured",
   image: "/projects/native-flora-dashboard.png", 
-  githubUrl: "https://github.com/michaelacera/native-flora-detection",
+  githubUrl: "https://github.com/aceramichaelangelo/native-flora-detection",
   demoUrl: "https://native-flora-demo.vercel.app",
-  problem: "Field identification of native flora is slow and requires expert knowledge.",
-  solution: "Flutter mobile + web dashboard with YOLO detection and cloud-synced species mapping.",
+  problem: "Identifying and mapping native flora species in the field is slow and requires specialized botanical knowledge.",
+  solution: "A cross-platform Flutter mobile app and web dashboard that uses YOLO models to classify flora and map locations via geoanalytics.",
   features: [
-    "Real-time flora identification via camera",
-    "YOLO object detection and classification",
-    "Interactive geoanalytics species mapping"
+    "Real-time species identification via camera",
+    "YOLO classification models",
+    "Interactive species mapping & geoanalytics",
+    "Centralized cloud sync database"
   ],
-  process: [],
+  process: [
+    "Design UI/UX in Figma",
+    "Train YOLO detection models",
+    "Develop Flutter client app",
+    "Deploy cloud mapping dashboard"
+  ],
   impact: [
-    "Faster biodiversity monitoring for field workers",
-    "Combines mobile, AI, and geoanalytics in one system"
+    "Streamlines field identification for researchers",
+    "Enables data-driven biodiversity monitoring",
+    "Demonstrates Flutter & computer vision integration"
   ]
 };
 
@@ -31,29 +35,29 @@ export const webProjects: Project[] = [
   {
     id: "web-django-zodiac",
     title: "Django Automation Center (Zodiac System)",
-    description: "Full-stack automation hub with scheduling, QR tools, and cipher utilities.",
+    description: "Full-stack Django automation tool with cipher utilities and QR scanners.",
     technologies: ["Django", "Python", "MySQL", "REST APIs", "Bootstrap"],
     category: "web",
     image: "/projects/django-project.png", 
-    githubUrl: "https://github.com/michaelacera/django-apps"
+    githubUrl: "https://github.com/aceramichaelangelo/django-apps"
   },
   {
     id: "web-mlbb-tracker",
     title: "MLBB Pilot Rank Tracker",
-    description: "PHP rank tracker with account management and live game statistics.",
+    description: "PHP rank tracking portal with game statistics and real-time monitoring dashboard.",
     technologies: ["PHP", "JavaScript", "MySQL", "REST APIs", "Bootstrap"],
     category: "web",
     image: "/projects/mlbb-tracker.png", 
-    githubUrl: "https://github.com/michaelacera/mlbb-tracker"
+    githubUrl: "https://github.com/aceramichaelangelo/mlbb-tracker"
   },
   {
     id: "web-nextjs-portfolio",
     title: "Next.js Professional Portfolio",
-    description: "Dark glassmorphic portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
+    description: "Personal developer portfolio built with Next.js, Tailwind CSS, and Framer Motion.",
     technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
     category: "web",
     image: "/projects/portfolio-v2.png", 
-    githubUrl: "https://github.com/michaelacera/portfolio",
+    githubUrl: "https://github.com/aceramichaelangelo/portfolio",
     demoUrl: "https://michaelacera.dev"
   }
 ];
@@ -62,19 +66,19 @@ export const mobileProjects: Project[] = [
   {
     id: "mobile-dnsc-violation",
     title: "DNSC School Violation Monitoring System",
-    description: "Flutter app for logging and tracking student violations with cloud sync.",
+    description: "Flutter mobile client built to log, track, and sync student violation records.",
     technologies: ["Flutter", "Dart", "Cloud Databases", "Figma"],
     category: "mobile",
     image: "/mobile/dnsc-violation.png", 
-    githubUrl: "https://github.com/michaelacera/dnsc-violation"
+    githubUrl: "https://github.com/aceramichaelangelo/dnsc-violation"
   },
   {
     id: "mobile-shoewise",
     title: "ShoeWise: Foot-Scanning & Marketplace",
-    description: "AI foot-scanning app with shoe-fit recommendations and a built-in marketplace.",
+    description: "Flutter marketplace app featuring AI-based foot-scanning size recommendations.",
     technologies: ["Flutter", "Dart", "Cloud Databases", "Machine Learning", "Figma"],
     category: "mobile",
     image: "/mobile/shoewise.png", 
-    githubUrl: "https://github.com/michaelacera/shoewise"
+    githubUrl: "https://github.com/aceramichaelangelo/shoewise"
   }
 ];

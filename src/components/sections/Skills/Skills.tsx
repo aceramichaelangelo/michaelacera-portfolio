@@ -7,7 +7,8 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Container } from '@/components/ui/Container';
 import { SkillCategory } from './SkillCategory';
 import { MotionWrapper } from '@/components/shared/MotionWrapper';
-import { StaggerItem } from '@/components/shared/StaggerItem';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/lib/animations';
 
 export const Skills: React.FC = () => {
   return (
@@ -23,9 +24,9 @@ export const Skills: React.FC = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full px-4"
         >
           {skillCategories.map((category) => (
-            <StaggerItem key={category.id} className="h-full">
+            <motion.div key={category.id} variants={fadeInUp} className="h-full">
               <SkillCategory category={category} />
-            </StaggerItem>
+            </motion.div>
           ))}
         </MotionWrapper>
       </Container>

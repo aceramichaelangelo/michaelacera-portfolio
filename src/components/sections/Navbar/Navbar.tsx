@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
           whileHover={shouldReduce ? undefined : { scale: 1.03 }}
           whileTap={shouldReduce ? undefined : { scale: 0.97 }}
         >
-          MAA
+          My Portfolio
         </motion.button>
 
         <div className="hidden md:flex items-center gap-8">

@@ -7,7 +7,8 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Container } from '@/components/ui/Container';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import { MotionWrapper } from '@/components/shared/MotionWrapper';
-import { StaggerItem } from '@/components/shared/StaggerItem';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/lib/animations';
 
 export const WebProjects: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const WebProjects: React.FC = () => {
       <Container className="flex flex-col items-center">
         <SectionHeading
           title="Web Development"
-          subtitle="Web apps built with React, Next.js, Django, and PHP."
+          subtitle="Recent web projects built with React, Next.js, and Django, focusing on responsive design."
         />
 
         <MotionWrapper
@@ -23,9 +24,9 @@ export const WebProjects: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full px-4"
         >
           {webProjects.map((project) => (
-            <StaggerItem key={project.id} className="h-full">
+            <motion.div key={project.id} variants={fadeInUp} className="h-full">
               <ProjectCard project={project} imageType="project" />
-            </StaggerItem>
+            </motion.div>
           ))}
         </MotionWrapper>
       </Container>

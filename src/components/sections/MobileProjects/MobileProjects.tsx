@@ -7,7 +7,8 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Container } from '@/components/ui/Container';
 import { ProjectCard } from '@/components/ui/ProjectCard';
 import { MotionWrapper } from '@/components/shared/MotionWrapper';
-import { StaggerItem } from '@/components/shared/StaggerItem';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '@/lib/animations';
 
 export const MobileProjects: React.FC = () => {
   return (
@@ -15,17 +16,17 @@ export const MobileProjects: React.FC = () => {
       <Container className="flex flex-col items-center">
         <SectionHeading
           title="Mobile Development"
-          subtitle="Flutter apps with cloud integration and modern UI."
+          subtitle="Cross-platform applications built with Flutter and Dart, styled with high-fidelity Figma components."
         />
 
         <MotionWrapper
           variant="staggerContainer"
-          className="grid w-full max-w-4xl grid-cols-1 items-stretch gap-6 px-4 md:grid-cols-2"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl w-full px-4"
         >
           {mobileProjects.map((project) => (
-            <StaggerItem key={project.id} className="flex h-full">
+            <motion.div key={project.id} variants={fadeInUp} className="h-full">
               <ProjectCard project={project} imageType="mobile" />
-            </StaggerItem>
+            </motion.div>
           ))}
         </MotionWrapper>
       </Container>

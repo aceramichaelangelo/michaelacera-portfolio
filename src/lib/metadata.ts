@@ -16,7 +16,7 @@ export function constructMetadata({
     title,
     description,
     keywords: [
-      "web developer",
+      "Student Full Stack Developer",
       "mobile developer",
       "Flutter",
       "Next.js",
