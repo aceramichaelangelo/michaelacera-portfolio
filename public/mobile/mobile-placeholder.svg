@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 350" width="100%" height="100%">
+  <rect width="200" height="350" fill="#040212" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6,6" />
+  <rect x="25" y="25" width="150" height="300" rx="15" ry="15" fill="none" stroke="#a855f7" stroke-width="2" />
+  <circle cx="100" cy="300" r="10" fill="none" stroke="#a855f7" stroke-width="2" />
+  <text x="100" y="180" font-family="monospace" font-size="9" fill="#06b6d4" text-anchor="middle">MOBILE APP PLACEHOLDER</text>
+</svg>
