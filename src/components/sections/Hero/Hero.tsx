@@ -18,12 +18,11 @@ export const Hero: React.FC = () => {
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
-    if (shouldReduce) return;
     const timer = setInterval(() => {
       setRoleIndex((prev) => (prev + 1) % heroData.roles.length);
     }, 3000);
     return () => clearInterval(timer);
-  }, [shouldReduce]);
+  }, []);
 
   const itemFadeUp = {
     hidden: { opacity: 0, y: 15 },
@@ -64,19 +63,25 @@ export const Hero: React.FC = () => {
             className="mb-6 flex w-full flex-col items-center gap-2 sm:flex-row sm:justify-center lg:justify-start sm:gap-2"
           >
             <span className="text-sm font-mono text-slate-400 shrink-0">I am a</span>
-            <div className="relative flex min-h-[2.25rem] w-full max-w-[min(100%,20rem)] items-center justify-center sm:max-w-xs lg:justify-start">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={roleIndex}
-                  initial={{ y: 16, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -16, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: "easeInOut" }}
-                  className="inline-block max-w-full rounded-xl border border-cyan-500/25 bg-cyan-950/45 px-3 py-1.5 text-center text-[11px] font-bold font-mono leading-snug text-cyan-400 sm:text-xs sm:whitespace-nowrap"
-                >
+            <div className="relative flex min-h-[2.75rem] w-full items-center justify-center overflow-visible sm:w-auto sm:min-w-[17rem] lg:justify-start">
+              {shouldReduce ? (
+                <span className="inline-block max-w-full rounded-xl border border-cyan-500/25 bg-cyan-950/45 px-3 py-1.5 text-center text-[11px] font-bold font-mono leading-snug text-cyan-400 sm:text-xs sm:whitespace-nowrap">
                   {heroData.roles[roleIndex]}
-                </motion.span>
-              </AnimatePresence>
+                </span>
+              ) : (
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={roleIndex}
+                    initial={{ y: 16, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: -16, opacity: 0 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="inline-block max-w-full rounded-xl border border-cyan-500/25 bg-cyan-950/45 px-3 py-1.5 text-center text-[11px] font-bold font-mono leading-snug text-cyan-400 sm:text-xs sm:whitespace-nowrap"
+                  >
+                    {heroData.roles[roleIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              )}
             </div>
           </motion.div>
 
