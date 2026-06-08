@@ -1,6 +1,7 @@
 export const heroData = {
   name: "Michael Angelo Acera",
   role: "Bachelor of Science in Information Technology Student",
+  roleMobile: "BSIT Student",
   roles: [
     "Student Full Stack Developer",
     "Mobile App Developer",
